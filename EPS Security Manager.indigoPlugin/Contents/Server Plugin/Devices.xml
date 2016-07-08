@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+
+<Devices>
+	<Device type="custom" id="epssecm">
+		<Name>Security Group</Name>
+		<ConfigUI>
+			<Field id="deviceone" type="menu" >
+				<Label>Device 1:</Label>
+				<List class="indigo.devices" />
+			</Field>
+			
+			<Field type="menu" id="typeone" defaultValue="onoff" >
+				<Label>Type:</Label>
+				<List>
+					<Option value="onoff">On/Off Device</Option>
+					<Option value="io">I/O Device</Option>
+					<Option value="sm">Security Manager Group</Option>
+					<Option value="advanced">Advanced Custom Device</Option>
+				</List>
+			</Field>
+			
+			<Field type="menu" id="onoffsecuritystateone" defaultValue="on" visibleBindingId="typeone" visibleBindingValue="onoff">
+				<Label>Is insecure when:</Label>
+				<List>
+					<Option value="on">Device is On</Option>
+					<Option value="off">Device is Off</Option>
+				</List>
+			</Field>
+			
+			<Field type="menu" id="iosecurityinputone" defaultValue="binaryInput1" visibleBindingId="typeone" visibleBindingValue="io">
+				<Label>Is insecure when:</Label>
+				<List>
+					<Option value="binaryInput1">Input 1</Option>
+					<Option value="binaryInput2">Input 2</Option>
+					<Option value="binaryOutput1">Output 1</Option>
+					<Option value="binaryOutput2">Output 2</Option>
+				</List>
+			</Field>
+			
+			<Field type="menu" id="iosecuritystateone" defaultValue="on" visibleBindingId="typeone" visibleBindingValue="io">
+				<Label> </Label>
+				<List>
+					<Option value="on">Is On</Option>
+					<Option value="off">Is Off</Option>
+				</List>
+			</Field>	
+			
+			<Field id="advstateone" type="textfield" defaultValue="onOffState" visibleBindingId="typeone" visibleBindingValue="advanced">
+				<Label>Exact state name:</Label>
+			</Field>
+			
+			<Field id="advvalueone" type="textfield" defaultValue="true" visibleBindingId="typeone" visibleBindingValue="advanced">
+				<Label>Equals exact value:</Label>
+			</Field>
+			
+			<Field id="dumpone" type="button" visibleBindingId="typeone" visibleBindingValue="advanced">
+				<Label> </Label>
+				<Title>Show States in Log </Title>
+				<CallbackMethod>showStatesOne</CallbackMethod>
+			</Field>
+			
+			<Field id="spacerone" type="label" visibleBindingId="typeone" visibleBindingValue="onoff">
+				<Label>
+				</Label>
+			</Field>
+			
+			<Field id="buttonone" type="button" >
+				<Label> </Label>
+				<Title>Clear </Title>
+				<CallbackMethod>clearDeviceOne</CallbackMethod>
+			</Field>
+			
+			<Field id="lineone" type="separator" />		
+			
+			<Field id="devicetwo" type="menu" >
+				<Label>Device 2:</Label>
+				<List class="indigo.devices" />
+			</Field>
+			
+			<Field type="menu" id="typetwo" defaultValue="onoff" >
+				<Label>Type:</Label>
+				<List>
+					<Option value="onoff">On/Off Device</Option>
+					<Option value="io">I/O Device</Option>
+					<Option value="sm">Security Manager Group</Option>
+					<Option value="advanced">Advanced Custom Device</Option>
+				</List>
+			</Field>
+			
+			<Field type="menu" id="onoffsecuritystatetwo" defaultValue="on" visibleBindingId="typetwo" visibleBindingValue="onoff">
+				<Label>Is insecure when:</Label>
+				<List>
+					<Option value="on">Device is On</Option>
+					<Option value="off">Device is Off</Option>
+				</List>
+			</Field>
+			
+			<Field type="menu" id="iosecurityinputtwo" defaultValue="input1" visibleBindingId="typetwo" visibleBindingValue="io">
+				<Label>Is insecure when:</Label>
+				<List>
+					<Option value="input1">Input 1</Option>
+					<Option value="input2">Input 2</Option>
+					<Option value="output1">Output 1</Option>
+					<Option value="output2">Output 2</Option>
+				</List>
+			</Field>
+			
+			<Field type="menu" id="iosecuritystatetwo" defaultValue="on" visibleBindingId="typetwo" visibleBindingValue="io">
+				<Label> </Label>
+				<List>
+					<Option value="on">Is On</Option>
+					<Option value="off">Is Off</Option>
+				</List>
+			</Field>	
+			
+			<Field id="advstatetwo" type="textfield" defaultValue="onOffState" visibleBindingId="typetwo" visibleBindingValue="advanced">
+				<Label>Exact state name:</Label>
+			</Field>
+			
+			<Field id="advvaluetwo" type="textfield" defaultValue="true" visibleBindingId="typetwo" visibleBindingValue="advanced">
+				<Label>Equals exact value:</Label>
+			</Field>
+			
+			<Field id="dumptwo" type="button" visibleBindingId="typetwo" visibleBindingValue="advanced">
+				<Label> </Label>
+				<Title>Show States in Log </Title>
+				<CallbackMethod>showStatesTwo</CallbackMethod>
+			</Field>
+			
+			<Field id="spacertwo" type="label" visibleBindingId="typetwo" visibleBindingValue="onoff">
+				<Label>
+				</Label>
+			</Field>
+			
+			<Field id="buttontwo" type="button" >
+				<Label> </Label>
+				<Title>Clear </Title>
+				<CallbackMethod>clearDeviceTwo</CallbackMethod>
+			</Field>
+			
+			<Field id="linetwo" type="separator" />	
+			
+			<Field id="devicethree" type="menu" >
+				<Label>Device 3:</Label>
+				<List class="indigo.devices" />
+			</Field>
+			
+			<Field type="menu" id="typethree" defaultValue="onoff" >
+				<Label>Type:</Label>
+				<List>
+					<Option value="onoff">On/Off Device</Option>
+					<Option value="io">I/O Device</Option>
+					<Option value="sm">Security Manager Group</Option>
+					<Option value="advanced">Advanced Custom Device</Option>
+				</List>
+			</Field>
+			
+			<Field type="menu" id="onoffsecuritystatethree" defaultValue="on" visibleBindingId="typethree" visibleBindingValue="onoff">
+				<Label>Is insecure when:</Label>
+				<List>
+					<Option value="on">Device is On</Option>
+					<Option value="off">Device is Off</Option>
+				</List>
+			</Field>
+			
+			<Field type="menu" id="iosecurityinputthree" defaultValue="input1" visibleBindingId="typethree" visibleBindingValue="io">
+				<Label>Is insecure when:</Label>
+				<List>
+					<Option value="input1">Input 1</Option>
+					<Option value="input2">Input 2</Option>
+					<Option value="output1">Output 1</Option>
+					<Option value="output2">Output 2</Option>
+				</List>
+			</Field>
+			
+			<Field type="menu" id="iosecuritystatethree" defaultValue="on" visibleBindingId="typethree" visibleBindingValue="io">
+				<Label> </Label>
+				<List>
+					<Option value="on">Is On</Option>
+					<Option value="off">Is Off</Option>
+				</List>
+			</Field>	
+			
+			<Field id="advstatethree" type="textfield" defaultValue="onOffState" visibleBindingId="typethree" visibleBindingValue="advanced">
+				<Label>Exact state name:</Label>
+			</Field>
+			
+			<Field id="advvaluethree" type="textfield" defaultValue="true" visibleBindingId="typethree" visibleBindingValue="advanced">
+				<Label>Equals exact value:</Label>
+			</Field>
+			
+			<Field id="dumpthree" type="button" visibleBindingId="typethree" visibleBindingValue="advanced">
+				<Label> </Label>
+				<Title>Show States in Log </Title>
+				<CallbackMethod>showStatesThree</CallbackMethod>
+			</Field>
+			
+			<Field id="spacerthree" type="label" visibleBindingId="typethree" visibleBindingValue="onoff">
+				<Label>
+				</Label>
+			</Field>
+			
+			<Field id="buttonthree" type="button" >
+				<Label> </Label>
+				<Title>Clear </Title>
+				<CallbackMethod>clearDeviceThree</CallbackMethod>
+			</Field>
+			
+			<Field id="linethree" type="separator" />	
+			
+			<Field id="devicefour" type="menu" >
+				<Label>Device 4:</Label>
+				<List class="indigo.devices" />
+			</Field>
+			
+			<Field type="menu" id="typefour" defaultValue="onoff" >
+				<Label>Type:</Label>
+				<List>
+					<Option value="onoff">On/Off Device</Option>
+					<Option value="io">I/O Device</Option>
+					<Option value="sm">Security Manager Group</Option>
+					<Option value="advanced">Advanced Custom Device</Option>
+				</List>
+			</Field>
+			
+			<Field type="menu" id="onoffsecuritystatefour" defaultValue="on" visibleBindingId="typefour" visibleBindingValue="onoff">
+				<Label>Is insecure when:</Label>
+				<List>
+					<Option value="on">Device is On</Option>
+					<Option value="off">Device is Off</Option>
+				</List>
+			</Field>
+			
+			<Field type="menu" id="iosecurityinputfour" defaultValue="input1" visibleBindingId="typefour" visibleBindingValue="io">
+				<Label>Is insecure when:</Label>
+				<List>
+					<Option value="input1">Input 1</Option>
+					<Option value="input2">Input 2</Option>
+					<Option value="output1">Output 1</Option>
+					<Option value="output2">Output 2</Option>
+				</List>
+			</Field>
+			
+			<Field type="menu" id="iosecuritystatefour" defaultValue="on" visibleBindingId="typefour" visibleBindingValue="io">
+				<Label> </Label>
+				<List>
+					<Option value="on">Is On</Option>
+					<Option value="off">Is Off</Option>
+				</List>
+			</Field>	
+			
+			<Field id="advstatefour" type="textfield" defaultValue="onOffState" visibleBindingId="typefour" visibleBindingValue="advanced">
+				<Label>Exact state name:</Label>
+			</Field>
+			
+			<Field id="advvaluefour" type="textfield" defaultValue="true" visibleBindingId="typefour" visibleBindingValue="advanced">
+				<Label>Equals exact value:</Label>
+			</Field>
+			
+			<Field id="dumpfour" type="button" visibleBindingId="typefour" visibleBindingValue="advanced">
+				<Label> </Label>
+				<Title>Show States in Log </Title>
+				<CallbackMethod>showStatesFour</CallbackMethod>
+			</Field>
+			
+			<Field id="spacerfour" type="label" visibleBindingId="typefour" visibleBindingValue="onoff">
+				<Label>
+				</Label>
+			</Field>
+			
+			<Field id="buttonfour" type="button" >
+				<Label> </Label>
+				<Title>Clear </Title>
+				<CallbackMethod>clearDeviceFour</CallbackMethod>
+			</Field>
+			
+			<Field id="linefour" type="separator" hidden="true"/>				
+			
+		</ConfigUI>
+		<States>
+			<State id="onOffState">
+				<ValueType boolType="OnOff">Boolean</ValueType>
+				<TriggerLabel>Security state</TriggerLabel>
+				<ControlPageLabel>Security state</ControlPageLabel>
+			</State>
+			
+		</States>
+		<UiDisplayStateId>onOffState</UiDisplayStateId>
+	</Device>
+</Devices>
